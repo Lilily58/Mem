@@ -99,6 +99,6 @@ It does not yet include:
 
 ## License
 
-No license file is included yet.
+This project is licensed under the MIT License.
 
-If you plan to open-source broadly, add a license (for example `MIT`) before external reuse.
+See `LICENSE` for details.
