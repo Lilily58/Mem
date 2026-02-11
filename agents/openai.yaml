@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mem Skill"
+  short_description: "Temporal memory with evidence-based conflict handling"
+  default_prompt: "Use $mem-skill to design or improve a temporal conversational memory system with time-aware retrieval, evidence arbitration, confidence scoring, and atomic profile updates."
